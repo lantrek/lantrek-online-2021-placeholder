@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig host="ossipesonen.fi" id="8bfb0ec9-c95f-46f2-bca4-7169d7729715" keyPath="$USER_HOME$/.ssh/ossipesonen" port="22" nameFormat="DESCRIPTIVE" username="ossi" />
+    </configs>
+  </component>
+</project>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="9949563f-59ce-4973-b030-dadecf72412e" name="ossipesonen" url="https://dev.ossipesonen.fi/lantrek2021">
+        <fileTransfer rootFolder="/home/ossi/dev/lantrek2021" accessType="SFTP" host="ossipesonen.fi" port="22" sshConfigId="8bfb0ec9-c95f-46f2-bca4-7169d7729715" sshConfig="ossi@ossipesonen.fi:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
