@@ -5,274 +5,288 @@ $color-grey: #a0aab8;
 $color-dark-blue: #11171D;
 
 @mixin defaultTransition {
-    transition: all .12s ease-in-out;
+  transition: all .12s ease-in-out;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@500;600;700&display=swap');
 
 html,
 body {
-    padding: 0;
-    margin: 0;
-    font-family: 'Lato', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    font-size: 14px;
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 14px;
 
-    @media screen and (min-width: 960px) {
-        font-size: 16px;
-    }
+  @media screen and (min-width: 960px) {
+    font-size: 16px;
+  }
 
-    background: url("../public/background.jpg") center no-repeat fixed #161D26;
-    background-size: cover;
-    color: #FFF;
+  background: url("../public/background.jpg") center no-repeat fixed #161D26;
+  background-size: cover;
+  color: #FFF;
 }
 
 h1, h2, h3 {
-    font-family: 'Poppins', 'Lato', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    font-weight: 700;
-    margin: 0;
-    line-height: 1.2;
+  font-family: 'Poppins', 'Lato', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
 }
 
 h1 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
+  font-size: 3rem;
+  margin-bottom: 2rem;
 
-    @media screen and (min-width: 960px) {
-        font-size: 4.5rem;
-    }
+  @media screen and (min-width: 960px) {
+    font-size: 4.5rem;
+  }
 
-    @media screen and (min-width: 1280px) {
-        font-size: 6rem;
-    }
+  @media screen and (min-width: 1280px) {
+    font-size: 6rem;
+  }
 }
 
 h2 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 a {
-    color: $color-cyan;
-    text-decoration: none;
-    @include defaultTransition;
+  color: $color-cyan;
+  text-decoration: none;
+  @include defaultTransition;
 
-    &:hover {
-        color: $color-grey;
-    }
+  &:hover {
+    color: $color-grey;
+  }
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 p {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 button {
-    border: 0;
-    background: transparent;
-    outline: 0;
-    display: inline-block;
-    padding: 0.5rem;
+  border: 0;
+  background: transparent;
+  outline: 0;
+  display: inline-block;
+  padding: 0.5rem;
 }
 
 .wrapper {
-    width: 100%;
-    display: block;
-    max-width: 1660px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    box-sizing: border-box;
-    position: relative;
-    z-index: 1;
+  width: 100%;
+  display: block;
+  max-width: 1660px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
 
-    @media screen and (min-width: 960px) {
-        padding: 0 2rem;
-    }
+  @media screen and (min-width: 960px) {
+    padding: 0 2rem;
+  }
 }
 
 .header {
+  margin-top: 2rem;
+  text-align: center;
+
+
+  @media screen and (min-height: 640px) {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    margin-top: 2rem;
-    text-align: center;
+    margin-top: 1.5rem;
+  }
 
-    @media screen and (min-width: 960px) {
-        margin-top: 1.5rem;
-        text-align: left;
-    }
+  @media screen and (min-width: 960px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 1.5rem;
+    text-align: left;
+  }
 }
 
 .content {
-    display: flex;
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem 0;
+  text-align: center;
+
+  @media screen and (min-height: 640px) {
     min-height: 100vh;
-    align-items: flex-end;
-    padding: 2rem 0;
+  }
+
+  @media screen and (min-width: 960px) {
+    text-align: left;
     padding-top: 100px;
-    text-align: center;
+    min-height: 100vh;
+  }
 
-    @media screen and (min-width: 960px) {
-        text-align: left;
-    }
-}
-
-.language-selection {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    z-index: 50;
-}
-
-.link-group {
-    margin: 0 -1rem;
-
-    a {
-        padding: 0 1rem;
-    }
-}
-
-.content h3 {
-    color:$color-orange;
+  h3 {
+    color: $color-orange;
     font-weight: 500;
-}
+  }
 
-.social-media-links {
-    justify-content: center;
-    margin-top: 2rem;
-    text-align: center;
-
-    @media screen and (min-width: 960px) {
-        text-align: right;
-        margin-top: 0;
-    }
-
-    a {
-        display: inline-block;
-        text-align: center;
-        line-height: 20px;
-        color: #FFF;
-        font-weight: bold;
-        font-size: 0;
-
-        @media screen and (min-width: 960px) {
-            text-align: right;
-        }
-
-
-        @media screen and (min-width: 960px) {
-            font-size: 1rem;
-        }
-
-        &:hover {
-            color: $color-grey;
-        }
-
-        > div {
-            position: relative;
-            top: 3px;
-            margin: 0 1rem 0 0 !important;
-        }
-
-        img {
-            width: 24px;
-            height: 24px;
-
-            @media screen and (min-width: 960px) {
-                width: 16px;
-                height: 16px;
-            }
-        }
-    }
-
-    .link-group {
-        text-align: center;
-
-        @media screen and (min-width: 960px) {
-            text-align: right;
-        }
-
-    }
-
-    button {
-        cursor: pointer;
-        color: $color-cyan;
-        padding: 0 1rem;
-        font-size: 1.5rem;
-        @include defaultTransition;
-
-        &:hover {
-            color: $color-grey;
-        }
-
-        @media screen and (min-width: 960px) {
-            font-size: 1rem;
-        }
-    }
-}
-
-.texture-1 {
-    position: fixed;
-    top: -1rem;
-    left: -150px;
-    background: url("../public/texture-big.png") center no-repeat;
-    height: 200px;
-    width: 250px;
-    z-index: 0;
-}
-
-@media screen and (min-width: 960px) {
-    .texture-2 {
-        position: fixed;
-        top: 30%;
-        right: 30%;
-        background: url("../public/texture-small.png") center no-repeat;
-        height: 140px;
-        width: 110px;
-        z-index: 0;
-    }
-
-    .texture-4 {
-        position: fixed;
-        bottom: 20%;
-        left: 10px;
-        background: url("../public/texture-small.png") center no-repeat;
-        background-size: 125%;
-        height: 140px;
-        width: 110px;
-        z-index: 0;
-    }
-}
-
-.texture-3 {
-    position: fixed;
-    bottom: -100px;
-    right: -175px;
-    background: url("../public/texture-big.png") center no-repeat;
-    height: 200px;
-    width: 250px;
-    z-index: 0;
-}
-
-.announcement-link {
+  .announcement-link {
     font-weight: bold;
     font-size: 1.25rem;
     margin-bottom: 2rem;
     display: block;
     font-family: 'Poppins', 'Lato', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  }
+
+  .website-opened {
+    text-align: center;
+    margin-top: 1rem;
+    opacity: 0.6;
+  }
 }
 
-.website-opened {
+.language-selection {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 50;
+}
+
+.link-group {
+  margin: 0 -1rem;
+
+  a {
+    padding: 0 1rem;
+  }
+}
+
+.social-media-links {
+  justify-content: center;
+  margin-top: 2rem;
+  text-align: center;
+
+  @media screen and (min-width: 960px) {
     text-align: right;
-    opacity: 0.6;
+    margin-top: 0;
+  }
+
+  a {
+    display: inline-block;
+    text-align: center;
+    line-height: 20px;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 0;
+
+    @media screen and (min-width: 960px) {
+      text-align: right;
+    }
+
+
+    @media screen and (min-width: 960px) {
+      font-size: 1rem;
+    }
+
+    &:hover {
+      color: $color-grey;
+    }
+
+    > div {
+      position: relative;
+      top: 3px;
+      margin: 0 1rem 0 0 !important;
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+
+      @media screen and (min-width: 960px) {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  .link-group {
+    text-align: center;
+
+    @media screen and (min-width: 960px) {
+      text-align: right;
+    }
+
+  }
+
+  button {
+    cursor: pointer;
+    color: $color-cyan;
+    padding: 0 1rem;
+    font-size: 1.5rem;
+    @include defaultTransition;
+
+    &:hover {
+      color: $color-grey;
+    }
+
+    @media screen and (min-width: 960px) {
+      font-size: 1rem;
+    }
+  }
+}
+
+.texture-1 {
+  position: fixed;
+  top: -1rem;
+  left: -150px;
+  background: url("../public/texture-big.png") center no-repeat;
+  height: 200px;
+  width: 250px;
+  z-index: 0;
+}
+
+@media screen and (min-width: 960px) {
+  .texture-2 {
+    position: fixed;
+    top: 30%;
+    right: 30%;
+    background: url("../public/texture-small.png") center no-repeat;
+    height: 140px;
+    width: 110px;
+    z-index: 0;
+  }
+
+  .texture-4 {
+    position: fixed;
+    bottom: 20%;
+    left: 10px;
+    background: url("../public/texture-small.png") center no-repeat;
+    background-size: 125%;
+    height: 140px;
+    width: 110px;
+    z-index: 0;
+  }
+}
+
+.texture-3 {
+  position: fixed;
+  bottom: -100px;
+  right: -175px;
+  background: url("../public/texture-big.png") center no-repeat;
+  height: 200px;
+  width: 250px;
+  z-index: 0;
 }
 
 @import "grid";
