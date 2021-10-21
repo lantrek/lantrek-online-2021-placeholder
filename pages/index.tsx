@@ -1,14 +1,20 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import Head from 'next/head';
-import { NextPage } from 'next';
 import Link from 'next/link';
-import { LanguageContext, locales } from '../intl/LanguageProvider';
 import useTranslation from '../intl/useTranslation';
+import { NextPage } from 'next';
+import { LanguageContext, locales } from '../intl/LanguageProvider';
 import { useRouter } from 'next/router';
+import { Modal, Button } from 'react-bootstrap'
 
 const Home: NextPage = () => {
   const { t } = useTranslation();
   const [locale, setLocale] = useContext(LanguageContext);
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   const router = useRouter();
 
   function handleLocaleChange (language: string) {
@@ -17,14 +23,14 @@ const Home: NextPage = () => {
     router.push(router.pathname, router.asPath.replace(regex, `/${ language }`));
   }
 
-  const title = 'Lantrek Online 2021 - 4.-7. maaliskuuta, 2021';
-  const description = ' LanTrek Online 2021 tapahtuma järjestetään 4-7.3.2021. Tapahtumassa on luvassa peliturnauksia, kilpailuita, etäpisteitä ympäri Tamperetta, streamaajia ja koko viikonlopun kestävä TV-lähetys';
+  const title = 'Lantrek 2022 - 3-6. maaliskuuta, 2022';
+  const description = ' LanTrek 2022 tapahtuma järjestetään 3-6.3.2022, Tampereen messu- ja urheilukeskuksessa! Kaikkien iloksi palaamme jälleen fyysiseksi tapahtumaksi välivuoden jälkeen - vähänkö siistiä!';
 
   return (
     <>
       <div id="root">
         <Head>
-          <title>Lantrek Online 2021</title>
+          <title>Lantrek 2022 - 3-6. maaliskuuta, 2022</title>
           <meta name="viewport" content="width=device-width, initial-scale=1"/>
           <meta charSet="utf-8"/>
           <meta name="description" content={ description }/>
@@ -57,7 +63,7 @@ const Home: NextPage = () => {
             <div className="wrapper">
               <div className="row">
                 <div className="col-xs-12 col-md-4">
-                  <img src="/logo.svg" alt="Lantrek Online 2021" title="Lantrek Online 2021" width="234" height="72"/>
+                  <img src="/logo.svg" alt="Lantrek 2022" title="Lantrek 2022" width="234" height="72"/>
                 </div>
                 <div className="col-xs-12 col-md-8 social-media-links">
                   <div className="link-group">
@@ -79,20 +85,20 @@ const Home: NextPage = () => {
           </div>
           <div className="content row">
             <div className="col-xs-12 col-md-8">
-              <h3>{ t('4th - 7th of March, 2021') }</h3>
-              <h1>{ t('THIS YEAR') }<br/> { t('ONLINE ONLY') }!</h1>
-              <Link href="https://facebook.com/story.php?story_fbid=10160184267810730&id=201321150729">
-                <a className="button announcement-link" target="_blank">{ t('Read announcement (Finnish only)') }</a>
-              </Link>
+              <h3>{ t('3rd - 6th of March, 2022') }</h3>
+              <h1>{ t('GAMING AGAIN AT') }<br/> <span>{ t('TAMPERE EXHIBITION AND SPORTS CENTRE') }!</span></h1>
               <div className="link-group">
-                <Link href="https://2018.lantrek.org">
-                  <a className="button" target="_blank">2018</a>
-                </Link>
+                <Button variant="primary" onClick={handleShow}>
+                  { t('Press release') }
+                </Button>
                 <Link href="https://2020.lantrek.org">
                   <a className="button" target="_blank">2019</a>
                 </Link>
                 <Link href="https://2020.lantrek.org">
                   <a className="button" target="_blank">2020</a>
+                </Link>
+                <Link href="https://2021.lantrek.org">
+                  <a className="button" target="_blank">2021</a>
                 </Link>
                 <Link href="https://lantrek.1g.fi/kuvat/">
                   <a className="button" target="_blank">{ t('Gallery') }</a>
@@ -100,11 +106,21 @@ const Home: NextPage = () => {
               </div>
             </div>
             <div className="col-xs-12 col-md-4 website-opened">
-              <p>{ t('Website will be opened in January') }.</p>
+              <p>{ t('Website will be opened later') }.</p>
             </div>
           </div>
         </section>
       </div>
+
+      <Modal show={show} onHide={handleClose} size="lg">
+        <Modal.Header closeButton closeVariant={'white'}>
+          <Modal.Title>LanTrek 2022 - Taas pelataan</Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body>
+          <p>Modal body text goes here.</p>
+        </Modal.Body>
+      </Modal>
       <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVBFTWL" height="0" width="0" style={{ display: 'none', visibility: 'hidden' }} />
       </noscript>

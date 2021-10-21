@@ -2,17 +2,19 @@ export const LangStrings = {
   en: {
     Gallery: "Gallery",
     "Read announcement (Finnish only)": "Read announcement (Finnish only)",
-    "4th - 7th of March, 2021": "4th - 7th of March, 2021",
-    "THIS YEAR": "THIS YEAR",
-    "ONLINE ONLY": "ONLINE ONLY",
-    "Website will be opened in January": "Website will be opened in January"
+    "3rd - 6th of March, 2022": "3rd - 6th of March, 2022",
+    "GAMING AGAIN AT'": "GAMING AGAIN AT'",
+    "TAMPERE EXHIBITION AND SPORTS CENTRE": "OTAMPERE EXHIBITION AND SPORTS CENTRE",
+    "Website will be opened later": "Website will be opened later",
+    "Press release": "Press release",
   },
   fi: {
     Gallery: "Galleria",
-    "4th - 7th of March, 2021": "4. - 7. maaliskuuta, 2021",
+    "3rd - 6th of March, 2022": "3. - 6. maaliskuuta, 2022",
     "Read announcement (Finnish only)": "Lue tiedote",
-    "THIS YEAR": "TÄNÄ VUONNA",
-    "ONLINE ONLY": "VAIN ONLINE",
-    "Website will be opened in January": "Verkkosivusto avataan tammikuussa"
+    "GAMING AGAIN AT": "TAAS PELATAAN",
+    "TAMPERE EXHIBITION AND SPORTS CENTRE": "TAMPEREEN MESSU- JA URHEILUKESKUKSESSA",
+    "Website will be opened later": "Verkkosivusto avataan myöhemmin",
+    "Press release": "Lehdistötiedote",
   },
 }
